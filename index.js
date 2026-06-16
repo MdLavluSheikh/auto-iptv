@@ -121,6 +121,7 @@ async function runFetch() {
     try {
       const content = await fetchM3U8(url);
       const channels = parseM3U8(content);
+      channels.forEach(ch => ch._source = url);
       log(`Parsed ${channels.length} channels from ${url}`);
       allChannels.push(...channels);
     } catch (e) {
@@ -130,8 +131,11 @@ async function runFetch() {
 
   let filtered = allChannels;
   if (config.blacklist && config.blacklist.length) {
+    const exemptSources = (config.blacklistExemptSources || []).map(s => s.replace(/\/+$/, ''));
     const patterns = config.blacklist.map(b => b.toLowerCase());
     filtered = allChannels.filter(ch => {
+      const chSource = (ch._source || '').replace(/\/+$/, '');
+      if (exemptSources.some(s => chSource === s)) return true;
       const text = (ch.name + " " + ch.url).toLowerCase();
       return !patterns.some(p => text.includes(p));
     });
