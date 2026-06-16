@@ -1,14 +1,12 @@
 {
   "sources": [
     "https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u",
-    "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u",
-    "https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/main/ALL.m3u"
+    "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
   ],
   "output": "bd_channels.m3u8",
   "blacklist": ["TOFFEE", "toffeelive.com", "bozztv.com", "aynaott.com", "ncare.live", "Sport", "Cricket", "ESPN", "PTV", "Willow", "Bein", "Sky Sport", "DIGI SPORT", "Football", "SPOR", "LIGA", "MOTOR VISION", "PREMIER LEAGUE"],
   "blacklistExemptSources": [
-    "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u",
-    "https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/main/ALL.m3u"
+    "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
   ],
   "prefer1080p": true,
   "logoMap": {
