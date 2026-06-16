@@ -131,7 +131,10 @@ async function runFetch() {
   let filtered = allChannels;
   if (config.blacklist && config.blacklist.length) {
     const patterns = config.blacklist.map(b => b.toLowerCase());
-    filtered = allChannels.filter(ch => !patterns.some(p => ch.name.toLowerCase().includes(p)));
+    filtered = allChannels.filter(ch => {
+      const text = (ch.name + " " + ch.url).toLowerCase();
+      return !patterns.some(p => text.includes(p));
+    });
     log(`After blacklist filter: ${filtered.length} channels`);
   }
 

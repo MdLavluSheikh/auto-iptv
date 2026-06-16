@@ -34,3 +34,11 @@
 [2026-06-16T13:58:12.727Z] After 1080p prioritization: 107 channels
 [2026-06-16T13:58:12.728Z] Saved 107 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
 [2026-06-16T13:58:12.729Z] ===== BD Channels Fetch Finished =====
+[2026-06-16T14:00:40.511Z] ===== BD Channels Fetch Started =====
+[2026-06-16T14:00:40.513Z] Fetching: https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T14:00:40.668Z] Parsed 51 channels from https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T14:00:40.669Z] After blacklist filter: 51 channels
+[2026-06-16T14:00:40.670Z] After dedup: 51 channels
+[2026-06-16T14:00:40.670Z] After 1080p prioritization: 51 channels
+[2026-06-16T14:00:40.671Z] Saved 51 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T14:00:40.671Z] ===== BD Channels Fetch Finished =====
