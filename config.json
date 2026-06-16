@@ -4,7 +4,8 @@
     "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
   ],
   "output": "bd_channels.m3u8",
-  "blacklist": ["TOFFEE", "toffeelive.com", "bozztv.com", "ncare.live", "Sport", "Cricket", "ESPN", "PTV", "Willow", "Bein", "Sky Sport", "DIGI SPORT", "Football", "SPOR", "LIGA", "MOTOR VISION", "PREMIER LEAGUE", " vs ", "T20", "ATP ", "T10", "Day 2 "],
+  "blacklist": ["TOFFEE", "toffeelive.com", "bozztv.com", "ncare.live", "Sport", "Cricket", "ESPN", "PTV", "Willow", "Sky Sport", "DIGI SPORT", "Football", "A SPOR", "LIGA", "MOTOR VISION", "PREMIER LEAGUE", " vs ", "T20", "ATP ", "T10", "Day 2 "],
+  "channelAllowlist": ["bein sports"],
   "blacklistExemptSources": [
     "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
   ],

@@ -133,11 +133,13 @@ async function runFetch() {
   if (config.blacklist && config.blacklist.length) {
     const exemptSources = (config.blacklistExemptSources || []).map(s => s.replace(/\/+$/, ''));
     const patterns = config.blacklist.map(b => b.toLowerCase());
+    const allowlist = (config.channelAllowlist || []).map(a => a.toLowerCase());
     filtered = allChannels.filter(ch => {
       const chSource = (ch._source || '').replace(/\/+$/, '');
       if (exemptSources.some(s => chSource === s)) return true;
-      const text = (ch.name + " " + ch.url).toLowerCase();
-      return !patterns.some(p => text.includes(p));
+      const chText = (ch.name + " " + ch.url).toLowerCase();
+      if (allowlist.some(a => chText.includes(a))) return true;
+      return !patterns.some(p => chText.includes(p));
     });
     log(`After blacklist filter: ${filtered.length} channels`);
   }
