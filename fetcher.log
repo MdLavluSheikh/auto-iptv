@@ -50,3 +50,11 @@
 [2026-06-16T14:08:03.351Z] After 1080p prioritization: 220 channels
 [2026-06-16T14:08:03.352Z] Saved 220 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
 [2026-06-16T14:08:03.354Z] ===== BD Channels Fetch Finished =====
+[2026-06-16T14:09:24.526Z] ===== BD Channels Fetch Started =====
+[2026-06-16T14:09:24.529Z] Fetching: https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
+[2026-06-16T14:09:25.009Z] Parsed 278 channels from https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
+[2026-06-16T14:09:25.010Z] After blacklist filter: 213 channels
+[2026-06-16T14:09:25.011Z] After dedup: 209 channels
+[2026-06-16T14:09:25.012Z] After 1080p prioritization: 204 channels
+[2026-06-16T14:09:25.013Z] Saved 204 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T14:09:25.014Z] ===== BD Channels Fetch Finished =====
