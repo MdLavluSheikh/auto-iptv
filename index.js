@@ -128,7 +128,14 @@ async function runFetch() {
     }
   }
 
-  let final = deduplicate(allChannels);
+  let filtered = allChannels;
+  if (config.blacklist && config.blacklist.length) {
+    const patterns = config.blacklist.map(b => b.toLowerCase());
+    filtered = allChannels.filter(ch => !patterns.some(p => ch.name.toLowerCase().includes(p)));
+    log(`After blacklist filter: ${filtered.length} channels`);
+  }
+
+  let final = deduplicate(filtered);
   log(`After dedup: ${final.length} channels`);
 
   if (config.prefer1080p) {

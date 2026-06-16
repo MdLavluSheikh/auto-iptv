@@ -14,3 +14,23 @@
 [2026-06-16T13:50:06.273Z] After 1080p prioritization: 110 channels
 [2026-06-16T13:50:06.275Z] Saved 110 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
 [2026-06-16T13:50:06.275Z] ===== BD Channels Fetch Finished =====
+[2026-06-16T13:57:44.051Z] ===== BD Channels Fetch Started =====
+[2026-06-16T13:57:44.053Z] Fetching: https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/working.m3u8
+[2026-06-16T13:57:44.466Z] Failed to fetch https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/working.m3u8: Request failed with status code 404
+[2026-06-16T13:57:44.467Z] Fetching: https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:57:44.908Z] Parsed 51 channels from https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:57:44.910Z] After blacklist filter: 51 channels
+[2026-06-16T13:57:44.911Z] After dedup: 51 channels
+[2026-06-16T13:57:44.912Z] After 1080p prioritization: 51 channels
+[2026-06-16T13:57:44.914Z] Saved 51 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T13:57:44.914Z] ===== BD Channels Fetch Finished =====
+[2026-06-16T13:58:12.444Z] ===== BD Channels Fetch Started =====
+[2026-06-16T13:58:12.446Z] Fetching: https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/bd_channels.m3u8
+[2026-06-16T13:58:12.604Z] Parsed 110 channels from https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/bd_channels.m3u8
+[2026-06-16T13:58:12.605Z] Fetching: https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:58:12.723Z] Parsed 51 channels from https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:58:12.724Z] After blacklist filter: 158 channels
+[2026-06-16T13:58:12.725Z] After dedup: 108 channels
+[2026-06-16T13:58:12.727Z] After 1080p prioritization: 107 channels
+[2026-06-16T13:58:12.728Z] Saved 107 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T13:58:12.729Z] ===== BD Channels Fetch Finished =====

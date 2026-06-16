@@ -1,9 +1,10 @@
 {
   "sources": [
-    "https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/working.m3u8",
+    "https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/bd_channels.m3u8",
     "https://iptv-org.github.io/iptv/countries/bd.m3u"
   ],
   "output": "bd_channels.m3u8",
+  "blacklist": ["TOFFEE"],
   "prefer1080p": true,
   "autoFetchInterval": 360,
   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
