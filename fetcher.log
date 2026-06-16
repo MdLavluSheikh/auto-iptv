@@ -1,0 +1,7 @@
+[2026-06-16T13:44:35.629Z] ===== BD Channels Fetch Started =====
+[2026-06-16T13:44:35.633Z] Fetching: https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:44:35.785Z] Parsed 51 channels from https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:44:35.786Z] After dedup: 51 channels
+[2026-06-16T13:44:35.787Z] After 1080p prioritization: 51 channels
+[2026-06-16T13:44:35.788Z] Saved 51 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T13:44:35.788Z] ===== BD Channels Fetch Finished =====

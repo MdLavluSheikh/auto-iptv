@@ -1,0 +1,14 @@
+{
+  "name": "bd-channels",
+  "version": "1.0.0",
+  "description": "Bangladeshi IPTV channels auto-fetcher with logos and 1080p support",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "fetch": "node index.js --once"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "node-cron": "^3.0.3"
+  }
+}
