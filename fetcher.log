@@ -216,3 +216,24 @@
 [2026-06-16T15:17:53.305Z] Logo map applied: 3 channels
 [2026-06-16T15:17:53.307Z] Saved 155 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
 [2026-06-16T15:17:53.307Z] ===== BD Channels Fetch Finished =====
+[2026-06-16T15:23:25.438Z] ===== BD Channels Fetch Started =====
+[2026-06-16T15:23:25.440Z] Fetching: https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
+[2026-06-16T15:23:26.655Z] Parsed 278 channels from https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
+[2026-06-16T15:23:26.656Z] Fetching: https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T15:23:27.134Z] Parsed 51 channels from https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T15:23:27.135Z] Fetching: https://iptv-org.github.io/iptv/countries/in.m3u
+[2026-06-16T15:23:27.256Z] Parsed 753 channels from https://iptv-org.github.io/iptv/countries/in.m3u
+[2026-06-16T15:23:27.257Z] Fetching: https://iptv-org.github.io/iptv/countries/pk.m3u
+[2026-06-16T15:23:27.297Z] Parsed 91 channels from https://iptv-org.github.io/iptv/countries/pk.m3u
+[2026-06-16T15:23:27.298Z] Fetching: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-06-16T15:23:27.344Z] Parsed 368 channels from https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-06-16T15:23:27.345Z] Fetching: https://iptv-org.github.io/iptv/categories/news.m3u
+[2026-06-16T15:23:27.429Z] Parsed 950 channels from https://iptv-org.github.io/iptv/categories/news.m3u
+[2026-06-16T15:23:27.430Z] Fetching: https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u
+[2026-06-16T15:23:27.814Z] Parsed 8 channels from https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u
+[2026-06-16T15:23:27.816Z] After allowlist filter: 2325 channels
+[2026-06-16T15:23:27.819Z] After dedup: 2019 channels
+[2026-06-16T15:23:27.822Z] After 1080p prioritization: 1973 channels
+[2026-06-16T15:23:27.825Z] Logo map applied: 0 channels
+[2026-06-16T15:23:27.829Z] Saved 1973 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T15:23:27.830Z] ===== BD Channels Fetch Finished =====

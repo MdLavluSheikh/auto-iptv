@@ -1,11 +1,41 @@
 {
   "sources": [
     "https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u",
+    "https://iptv-org.github.io/iptv/countries/bd.m3u",
+    "https://iptv-org.github.io/iptv/countries/in.m3u",
+    "https://iptv-org.github.io/iptv/countries/pk.m3u",
+    "https://iptv-org.github.io/iptv/categories/sports.m3u",
+    "https://iptv-org.github.io/iptv/categories/news.m3u",
     "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
   ],
   "output": "bd_channels.m3u8",
-  "channelAllowlist": [],
-  "blacklistExemptSources": [],
+  "channelAllowlist": [
+    "gpcdn.net",
+    "akash-go.com",
+    "ekusheyserver.com",
+    "deshitv24.net",
+    "matribhumitv.com",
+    "sunplex.live",
+    "sonarbanglatv.com",
+    "thebosstv.com",
+    "mytvbangla.com",
+    "zillarbarta.com",
+    "spicefmbd.com",
+    "padmaonline",
+    "zohanayaan",
+    "1nyaler.streamhostingcdn.top",
+    "aynaott.com",
+    "fifa world cup 2026",
+    "bein sports"
+  ],
+  "blacklistExemptSources": [
+    "https://iptv-org.github.io/iptv/countries/bd.m3u",
+    "https://iptv-org.github.io/iptv/countries/in.m3u",
+    "https://iptv-org.github.io/iptv/countries/pk.m3u",
+    "https://iptv-org.github.io/iptv/categories/sports.m3u",
+    "https://iptv-org.github.io/iptv/categories/news.m3u",
+    "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
+  ],
   "prefer1080p": true,
   "logoMap": {},
   "autoFetchInterval": 360,
