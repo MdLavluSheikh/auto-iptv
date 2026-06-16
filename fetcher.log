@@ -126,3 +126,14 @@
 [2026-06-16T15:04:38.069Z] Logo map applied: 3 channels
 [2026-06-16T15:04:38.070Z] Saved 157 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
 [2026-06-16T15:04:38.070Z] ===== BD Channels Fetch Finished =====
+[2026-06-16T15:06:18.227Z] ===== BD Channels Fetch Started =====
+[2026-06-16T15:06:18.230Z] Fetching: https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
+[2026-06-16T15:06:18.714Z] Parsed 278 channels from https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
+[2026-06-16T15:06:18.714Z] Fetching: https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u
+[2026-06-16T15:06:18.753Z] Parsed 8 channels from https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u
+[2026-06-16T15:06:18.755Z] After blacklist filter: 155 channels
+[2026-06-16T15:06:18.755Z] After dedup: 154 channels
+[2026-06-16T15:06:18.756Z] After 1080p prioritization: 150 channels
+[2026-06-16T15:06:18.757Z] Logo map applied: 3 channels
+[2026-06-16T15:06:18.758Z] Saved 150 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T15:06:18.758Z] ===== BD Channels Fetch Finished =====
