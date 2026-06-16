@@ -146,6 +146,16 @@ async function runFetch() {
     log(`After 1080p prioritization: ${final.length} channels`);
   }
 
+  if (config.logoMap) {
+    const map = Object.fromEntries(Object.entries(config.logoMap).map(([k, v]) => [k.toLowerCase(), v]));
+    let replaced = 0;
+    final.forEach(ch => {
+      const key = ch.name.toLowerCase().trim();
+      if (map[key]) { ch.logo = map[key]; replaced++; }
+    });
+    log(`Logo map applied: ${replaced} channels`);
+  }
+
   const m3u8 = generateM3U8(final);
   const outputPath = path.join(__dirname, config.output || "bd_channels.m3u8");
   fs.writeFileSync(outputPath, m3u8, "utf8");
