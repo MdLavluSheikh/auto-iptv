@@ -3,7 +3,7 @@
     "https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u"
   ],
   "output": "bd_channels.m3u8",
-  "blacklist": ["TOFFEE", "toffeelive.com", "bozztv.com", "aynaott.com", "ncare.live"],
+  "blacklist": ["TOFFEE", "toffeelive.com", "bozztv.com", "aynaott.com", "ncare.live", "Sport", "Cricket", "ESPN", "PTV", "Willow", "Bein", "Sky Sport", "DIGI SPORT", "Football", "SPOR", "LIGA", "MOTOR VISION", "PREMIER LEAGUE"],
   "prefer1080p": true,
   "autoFetchInterval": 360,
   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
