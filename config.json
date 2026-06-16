@@ -4,17 +4,10 @@
     "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
   ],
   "output": "bd_channels.m3u8",
-  "blacklist": ["TOFFEE", "toffeelive.com", "bozztv.com", "ncare.live", "Sport", "Cricket", "ESPN", "PTV", "Willow", "Sky Sport", "DIGI SPORT", "Football", "A SPOR", "LIGA", "MOTOR VISION", "PREMIER LEAGUE", " vs ", "T20", "ATP ", "T10", "Day 2 "],
-  "channelAllowlist": ["bein sports"],
-  "blacklistExemptSources": [
-    "https://raw.githubusercontent.com/A70N/IPTV/main/FIFA2026.m3u"
-  ],
+  "channelAllowlist": [],
+  "blacklistExemptSources": [],
   "prefer1080p": true,
-  "logoMap": {
-    "deepto tv": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1742713000749.png",
-    "bbc news": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BBC_News_logo_%282022%29.svg/1200px-BBC_News_logo_%282022%29.svg.png",
-    "maasranga hd": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1773680325498.png"
-  },
+  "logoMap": {},
   "autoFetchInterval": 360,
   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }

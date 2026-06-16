@@ -130,18 +130,16 @@ async function runFetch() {
   }
 
   let filtered = allChannels;
-  if (config.blacklist && config.blacklist.length) {
+  if (config.channelAllowlist && config.channelAllowlist.length) {
     const exemptSources = (config.blacklistExemptSources || []).map(s => s.replace(/\/+$/, ''));
-    const patterns = config.blacklist.map(b => b.toLowerCase());
-    const allowlist = (config.channelAllowlist || []).map(a => a.toLowerCase());
+    const allowlist = config.channelAllowlist.map(a => a.toLowerCase());
     filtered = allChannels.filter(ch => {
       const chSource = (ch._source || '').replace(/\/+$/, '');
       if (exemptSources.some(s => chSource === s)) return true;
       const chText = (ch.name + " " + ch.url).toLowerCase();
-      if (allowlist.some(a => chText.includes(a))) return true;
-      return !patterns.some(p => chText.includes(p));
+      return allowlist.some(a => chText.includes(a));
     });
-    log(`After blacklist filter: ${filtered.length} channels`);
+    log(`After allowlist filter: ${filtered.length} channels`);
   }
 
   let final = deduplicate(filtered);
