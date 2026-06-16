@@ -1,5 +1,6 @@
 {
   "sources": [
+    "https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/working.m3u8",
     "https://iptv-org.github.io/iptv/countries/bd.m3u"
   ],
   "output": "bd_channels.m3u8",

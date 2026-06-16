@@ -5,3 +5,12 @@
 [2026-06-16T13:44:35.787Z] After 1080p prioritization: 51 channels
 [2026-06-16T13:44:35.788Z] Saved 51 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
 [2026-06-16T13:44:35.788Z] ===== BD Channels Fetch Finished =====
+[2026-06-16T13:50:04.914Z] ===== BD Channels Fetch Started =====
+[2026-06-16T13:50:04.916Z] Fetching: https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/working.m3u8
+[2026-06-16T13:50:06.154Z] Parsed 75 channels from https://raw.githubusercontent.com/MdLavluSheikh/auto-iptv/main/working.m3u8
+[2026-06-16T13:50:06.155Z] Fetching: https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:50:06.272Z] Parsed 51 channels from https://iptv-org.github.io/iptv/countries/bd.m3u
+[2026-06-16T13:50:06.273Z] After dedup: 126 channels
+[2026-06-16T13:50:06.273Z] After 1080p prioritization: 110 channels
+[2026-06-16T13:50:06.275Z] Saved 110 channels to C:\Users\mdlav\OneDrive\Desktop\Tv all\M3u8\bd-channels\bd_channels.m3u8
+[2026-06-16T13:50:06.275Z] ===== BD Channels Fetch Finished =====

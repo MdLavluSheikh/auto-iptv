@@ -14,10 +14,6 @@ function log(msg) {
   fs.appendFileSync(LOG_FILE, line + "\n");
 }
 
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}
-
 async function fetchM3U8(url) {
   log(`Fetching: ${url}`);
   const res = await axios.get(url, {
@@ -29,13 +25,24 @@ async function fetchM3U8(url) {
 }
 
 function parseM3U8(content) {
-  const lines = content.split("\n").map((l) => l.trim());
+  const lines = content.split("\n").map((l) => l.trim()).filter(Boolean);
   const channels = [];
   let currentExtinf = "";
+  let currentUserAgent = "";
+  let currentCookie = "";
 
   for (const line of lines) {
     if (line.startsWith("#EXTINF:")) {
       currentExtinf = line;
+      currentUserAgent = "";
+      currentCookie = "";
+    } else if (line.startsWith("#EXTVLCOPT:http-user-agent=")) {
+      currentUserAgent = line.replace("#EXTVLCOPT:http-user-agent=", "");
+    } else if (line.startsWith("#EXTHTTP:")) {
+      try {
+        const json = JSON.parse(line.replace("#EXTHTTP:", ""));
+        currentCookie = json.cookie || "";
+      } catch {}
     } else if (line && !line.startsWith("#")) {
       const nameMatch = currentExtinf.match(/,([^,]+)$/);
       const name = nameMatch ? nameMatch[1].trim() : "";
@@ -49,8 +56,14 @@ function parseM3U8(content) {
       const quality = name.match(/\((\d+p)\)/);
       const resolution = quality ? parseInt(quality[1]) : 0;
 
-      channels.push({ name, url: line, logo, group, tvgId, resolution, raw: currentExtinf });
+      channels.push({
+        name, url: line, logo, group, tvgId, resolution,
+        userAgent: currentUserAgent,
+        cookie: currentCookie
+      });
       currentExtinf = "";
+      currentUserAgent = "";
+      currentCookie = "";
     }
   }
   return channels;
@@ -58,22 +71,17 @@ function parseM3U8(content) {
 
 function deduplicate(channels) {
   const seen = new Map();
-  const unique = [];
-  for (const ch of channels) {
+  return channels.filter(ch => {
     const key = ch.url.toLowerCase();
-    if (!seen.has(key)) {
+    if (!seen.has(key)) { seen.set(key, ch); return true; }
+    const existing = seen.get(key);
+    if (ch.resolution > existing.resolution) {
+      const idx = channels.indexOf(existing);
+      if (idx >= 0) channels[idx] = ch;
       seen.set(key, ch);
-      unique.push(ch);
-    } else {
-      const existing = seen.get(key);
-      if (ch.resolution > existing.resolution) {
-        const idx = unique.indexOf(existing);
-        unique[idx] = ch;
-        seen.set(key, ch);
-      }
     }
-  }
-  return unique;
+    return false;
+  });
 }
 
 function prioritize1080p(channels) {
@@ -96,21 +104,20 @@ function generateM3U8(channels) {
     if (ch.logo) attrs.push(`tvg-logo="${ch.logo}"`);
     if (ch.group) attrs.push(`group-title="${ch.group}"`);
     const attrStr = attrs.length ? " " + attrs.join(" ") : "";
-    output += `#EXTINF:-1${attrStr},${ch.name}\n${ch.url}\n`;
+    output += `#EXTINF:-1${attrStr},${ch.name}\n`;
+    if (ch.userAgent) output += `#EXTVLCOPT:http-user-agent=${ch.userAgent}\n`;
+    if (ch.cookie) output += `#EXTHTTP:{"cookie":"${ch.cookie}"}\n`;
+    output += `${ch.url}\n`;
   }
   return output;
 }
 
 async function runFetch() {
   log("===== BD Channels Fetch Started =====");
-  try {
-    config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
-  } catch { }
+  try { config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8")); } catch {}
 
   const allChannels = [];
-  const sources = config.sources || [];
-
-  for (const url of sources) {
+  for (const url of config.sources || []) {
     try {
       const content = await fetchM3U8(url);
       const channels = parseM3U8(content);
@@ -121,15 +128,12 @@ async function runFetch() {
     }
   }
 
-  const unique = deduplicate(allChannels);
-  log(`After dedup: ${unique.length} channels`);
+  let final = deduplicate(allChannels);
+  log(`After dedup: ${final.length} channels`);
 
-  let final;
   if (config.prefer1080p) {
-    final = prioritize1080p(unique);
+    final = prioritize1080p(final);
     log(`After 1080p prioritization: ${final.length} channels`);
-  } else {
-    final = unique;
   }
 
   const m3u8 = generateM3U8(final);
@@ -144,7 +148,7 @@ if (process.argv.includes("--once")) {
 } else {
   runFetch().catch((e) => log(`Error: ${e.message}`));
   const interval = config.autoFetchInterval || 360;
-  log(`Auto-fetch every ${interval} minutes (next run in ${interval} mins)`);
+  log(`Auto-fetch every ${interval} minutes`);
   cron.schedule(`*/${interval} * * * *`, () => {
     runFetch().catch((e) => log(`Error: ${e.message}`));
   });
